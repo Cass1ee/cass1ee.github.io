@@ -340,7 +340,7 @@
     </h2>
 
 
-    <p class="section-introduction">
+    <p class="section-introduction scroll-animate">
         More experiences will be added here as I continue
         building my skills and professional journey. 🎀
     </p>
@@ -380,7 +380,7 @@
     </h2>
 
 
-    <p class="section-introduction">
+    <p class="section-introduction scroll-animate">
         Courses and certifications I've completed while
         building my technical foundation.
     </p>
@@ -590,6 +590,46 @@
         </p>
 
     </footer>
+
+    
+ <!-- ==================== SCROLL ANIMATIONS ==================== -->
+
+    <script>
+
+        const animatedElements =
+            document.querySelectorAll(".scroll-animate");
+
+
+        const observer = new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.2
+            }
+
+        );
+
+
+        animatedElements.forEach((element) => {
+
+            observer.observe(element);
+
+        });
+
+    </script>
 
 
 </body>
