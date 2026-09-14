@@ -1148,3 +1148,41 @@ footer {
         0 0 30px rgba(255, 20, 147, 0.5);
 }
 
+/* ==================================================
+   VIDEO FALLBACK LINK
+   ================================================== */
+
+.video-fallback {
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #bdbdbd;
+
+    font-size: 16px;
+}
+
+
+.video-fallback a {
+
+    color: var(--pink);
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.video-fallback a:hover {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px rgba(255, 20, 147, 0.9),
+        0 0 18px rgba(255, 20, 147, 0.5);
+
+    text-decoration: underline;
+}
