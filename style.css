@@ -1186,3 +1186,462 @@ footer {
 
     text-decoration: underline;
 }
+
+
+/* ==================================================
+   CAT INTRO
+   ================================================== */
+
+#cat-intro {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #050505;
+
+    overflow: hidden;
+
+    animation:
+        catIntroFade 0.8s ease 3.8s forwards;
+
+}
+
+
+/* ==================================================
+   CAT CONTENT
+   ================================================== */
+
+.cat-intro-content {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation:
+        catPopOut 0.9s cubic-bezier(0.16, 1.4, 0.3, 1) forwards,
+        catShake 1s ease 0.9s 1,
+        catBounce 1.2s ease-in-out 1.8s 1;
+}
+
+
+/* ==================================================
+   CAT IMAGE
+   ================================================== */
+
+.cat-intro-content img {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 20, 147, 0.9))
+        drop-shadow(0 0 20px rgba(255, 20, 147, 0.7))
+        drop-shadow(0 0 45px rgba(255, 20, 147, 0.35));
+}
+
+
+/* ==================================================
+   WELCOME TEXT
+   ================================================== */
+
+.cat-intro-content p {
+
+    position: relative;
+
+    z-index: 4;
+
+    margin-top: 25px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    animation:
+        catTextPop 0.8s ease 2.4s forwards;
+
+    text-shadow:
+        0 0 8px rgba(255, 20, 147, 0.9),
+        0 0 20px rgba(255, 20, 147, 0.55);
+}
+
+
+/* ==================================================
+   SIDE EFFECTS
+   ================================================== */
+
+.cat-effects {
+
+    position: absolute;
+
+    inset: -120px;
+
+    pointer-events: none;
+
+}
+
+
+/* individual sparkles */
+
+.cat-effects span {
+
+    position: absolute;
+
+    color: var(--pink);
+
+    font-size: 28px;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 8px rgba(255, 20, 147, 1),
+        0 0 20px rgba(255, 20, 147, 0.8);
+
+    animation:
+        sparklePop 1.4s ease 0.4s forwards;
+}
+
+
+/* positions */
+
+.cat-effects span:nth-child(1) {
+
+    top: 20%;
+
+    left: 15%;
+
+    font-size: 32px;
+
+    animation-delay: 0.35s;
+}
+
+
+.cat-effects span:nth-child(2) {
+
+    top: 12%;
+
+    right: 18%;
+
+    font-size: 38px;
+
+    animation-delay: 0.55s;
+}
+
+
+.cat-effects span:nth-child(3) {
+
+    bottom: 25%;
+
+    left: 12%;
+
+    font-size: 25px;
+
+    animation-delay: 0.7s;
+}
+
+
+.cat-effects span:nth-child(4) {
+
+    bottom: 20%;
+
+    right: 14%;
+
+    font-size: 34px;
+
+    animation-delay: 0.85s;
+}
+
+
+.cat-effects span:nth-child(5) {
+
+    top: 36%;
+
+    left: 5%;
+
+    font-size: 22px;
+
+    animation-delay: 0.95s;
+}
+
+
+.cat-effects span:nth-child(6) {
+
+    top: 35%;
+
+    right: 5%;
+
+    font-size: 24px;
+
+    animation-delay: 1.05s;
+}
+
+
+/* ==================================================
+   CAT POPS TOWARD SCREEN
+   ================================================== */
+
+@keyframes catPopOut {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.15)
+            translateY(120px);
+
+    }
+
+    45% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.25)
+            translateY(-10px);
+
+    }
+
+    70% {
+
+        transform:
+            scale(0.92)
+            translateY(5px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==================================================
+   CUTE SHAKE
+   ================================================== */
+
+@keyframes catShake {
+
+    0%,
+    100% {
+
+        transform: rotate(0deg);
+
+    }
+
+    15% {
+
+        transform: rotate(-7deg);
+
+    }
+
+    30% {
+
+        transform: rotate(7deg);
+
+    }
+
+    45% {
+
+        transform: rotate(-5deg);
+
+    }
+
+    60% {
+
+        transform: rotate(5deg);
+
+    }
+
+    75% {
+
+        transform: rotate(-2deg);
+
+    }
+
+    90% {
+
+        transform: rotate(2deg);
+
+    }
+
+}
+
+
+/* ==================================================
+   LITTLE BOUNCE
+   ================================================== */
+
+@keyframes catBounce {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    30% {
+
+        transform: translateY(-18px);
+
+    }
+
+    55% {
+
+        transform: translateY(0);
+
+    }
+
+    72% {
+
+        transform: translateY(-8px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ==================================================
+   SPARKLE POP
+   ================================================== */
+
+@keyframes sparklePop {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(0)
+            rotate(-30deg);
+
+    }
+
+    40% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.4)
+            rotate(10deg);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.8)
+            translateY(-25px)
+            rotate(25deg);
+
+    }
+
+}
+
+
+/* ==================================================
+   TEXT POP
+   ================================================== */
+
+@keyframes catTextPop {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.7)
+            translateY(20px);
+
+    }
+
+    70% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.08)
+            translateY(-2px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==================================================
+   INTRO DISAPPEARS
+   ================================================== */
+
+@keyframes catIntroFade {
+
+    0% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+    }
+
+}
