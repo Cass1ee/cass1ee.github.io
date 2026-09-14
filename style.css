@@ -218,7 +218,7 @@ nav a:hover {
 }
 
 
-.hero h1 span {
+.hero h1 .name-animate {
 
     color: var(--pink);
 
