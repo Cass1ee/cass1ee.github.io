@@ -1671,3 +1671,157 @@ footer {
     transform: translateY(0) scale(1);
 
 }
+
+
+/* ==================================================
+   HERO ENTRANCE ANIMATION
+   ================================================== */
+
+.hero > * {
+
+    opacity: 0;
+
+    animation:
+        heroElementIn 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+
+}
+
+
+/* SOFTWARE ENGINEERING STUDENT */
+
+.hero > p:nth-child(1) {
+
+    animation-delay: 4.4s;
+
+}
+
+
+/* HII, I'M CASSANDRA */
+
+.hero > h1 {
+
+    animation-delay: 4.7s;
+
+}
+
+
+/* CASSANDRA NAME POP */
+
+.hero h1 span {
+
+    display: inline-block;
+
+    animation:
+        nameBounce 1s cubic-bezier(0.34, 1.56, 0.64, 1) 5.0s both;
+
+}
+
+
+/* ALWAYS LEARNING */
+
+.hero > p:nth-child(3) {
+
+    animation-delay: 5.7s;
+
+}
+
+
+/* LOCATION */
+
+.hero > p:nth-child(4) {
+
+    animation-delay: 6.0s;
+
+}
+
+
+/* BUTTONS */
+
+.hero > .hero-buttons {
+
+    animation-delay: 6.3s;
+
+}
+
+
+/* ==================================================
+   HERO GENERAL POP
+   ================================================== */
+
+@keyframes heroElementIn {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.92);
+
+    }
+
+    70% {
+
+        opacity: 1;
+
+        transform:
+            translateY(-5px)
+            scale(1.03);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==================================================
+   CASSANDRA BOUNCE
+   ================================================== */
+
+@keyframes nameBounce {
+
+    0% {
+
+        transform: scale(0.6);
+
+    }
+
+    45% {
+
+        transform: scale(1.15);
+
+        text-shadow:
+            0 0 15px rgba(255, 20, 147, 1),
+            0 0 35px rgba(255, 20, 147, 0.8),
+            0 0 65px rgba(255, 20, 147, 0.4);
+
+    }
+
+    65% {
+
+        transform: scale(0.95);
+
+    }
+
+    82% {
+
+        transform: scale(1.05);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
