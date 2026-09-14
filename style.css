@@ -1645,3 +1645,29 @@ footer {
     }
 
 }
+
+
+/* ==================================================
+   SCROLL TEXT ANIMATION
+   ================================================== */
+
+.scroll-animate {
+
+    opacity: 0;
+
+    transform: translateY(35px) scale(0.96);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+}
+
+
+.scroll-animate.show {
+
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+
+}
