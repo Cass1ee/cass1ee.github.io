@@ -1672,6 +1672,37 @@ footer {
 
 }
 
+/* ==================================================
+   ABOUT ME STAGGERED ANIMATION
+   ================================================== */
+
+.about-card p.scroll-animate:nth-child(1) {
+
+    transition-delay: 0s;
+
+}
+
+
+.about-card p.scroll-animate:nth-child(2) {
+
+    transition-delay: 0.15s;
+
+}
+
+
+.about-card p.scroll-animate:nth-child(3) {
+
+    transition-delay: 0.30s;
+
+}
+
+
+.about-card p.scroll-animate:nth-child(4) {
+
+    transition-delay: 0.45s;
+
+}
+
 
 /* ==================================================
    HERO ENTRANCE ANIMATION
@@ -2008,3 +2039,6 @@ footer {
 
     }
 }
+
+
+
