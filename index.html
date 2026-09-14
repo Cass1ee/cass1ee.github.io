@@ -953,42 +953,57 @@
     
  <!-- ==================== SCROLL ANIMATIONS ==================== -->
 
-    <script>
+ <script>
 
-        const animatedElements =
-            document.querySelectorAll(".scroll-animate");
-
-
-        const observer = new IntersectionObserver(
-
-            (entries) => {
-
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("show");
-
-                    }
-
-                });
-
-            },
-
-            {
-                threshold: 0.2
-            }
-
-        );
+    const animatedElements =
+        document.querySelectorAll(".scroll-animate");
 
 
-        animatedElements.forEach((element) => {
+    const observer = new IntersectionObserver(
 
-            observer.observe(element);
+        (entries) => {
 
-        });
+            entries.forEach((entry) => {
 
-    </script>
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+
+                    const skillBars =
+                        entry.target.querySelectorAll(".skill-bar-fill");
+
+
+                    skillBars.forEach((bar) => {
+
+                        const percentage =
+                            bar.getAttribute("data-percent");
+
+
+                        bar.style.width = percentage + "%";
+
+                    });
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.2
+        }
+
+    );
+
+
+    animatedElements.forEach((element) => {
+
+        observer.observe(element);
+
+    });
+
+</script>
 
 
 </body>
